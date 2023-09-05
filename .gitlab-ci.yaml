@@ -1,0 +1,32 @@
+build-job:
+  stage: build
+  script:
+    - echo "Building the app"
+    - echo "Build completed"
+  tags:
+    - docker
+
+static-analysis-job:
+  stage: static-analysis
+  script:
+    - echo "Running static analysis"
+    - echo "Static analysis completed"
+  tags:
+    - docker
+
+test-job:
+  stage: test
+  script:
+    - echo "Running tests"
+    - echo "Tests completed"
+  tags:
+    - docker
+
+
+push-job:
+  stage: push
+  script:
+    - echo "Pushing the app"
+    - echo "Push completed"
+  tags:
+    - docker
